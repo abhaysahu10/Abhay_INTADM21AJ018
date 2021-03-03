@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>ACBT Form</title>
+<script type="text/javascript">
+function formValidation(){
+	var CustomerName=document.form.customerName.value;
+	var MailId=document.form.mailId.value;
+	var MobNo=document.form.mobNo.value;
+	var BBType=document.form.bbType.value;
+	var SchemeName=document.form.schemeName.value;
+	var ConnDuration=document.form.connDuration.vlaue;
+	
+	if(CustomerName==""||CustomerName==null){
+		alert("Please fill Customer Name")
+	}else if(MailId==""||MailId==null){
+		alert("Please fill Customer email  Id")
+	}else if(MobNo==""||MobNo==null){
+		alert("Please fill Mobile Number")
+	}else if(BBType==""||BBType==null){
+		alert("Please fill Type of Broadband")
+	}else if(SchemeName==""||SchemeName==null){
+		alert("Please fill Schame Name")
+	}else if(ConnDuration==""||ConnDuration==null){
+		alert("Please fill Connection Duration")
+	}
+	
+}
+</script>
+</head>
+<body>
+<h2>ACBT Form</h2>
+	<form action="" name="form" onsubmit="return formValidation()">
+	<table>
+	<tr>
+	<td>Customer Name</td>
+	<td><input type="text" name="customerName"></td>
+	</tr>
+	<tr>
+	<td>Customer email Id</td>
+	<td><input type="text" name="mailId"></td>
+	</tr>
+	<tr>
+	<td>Mobile Number</td>
+	<td><input type="number" name="mobNo"></td>
+	</tr>
+	<tr>
+	<td>Type of Broadband</td>
+	<td><input type="text" name="bbType"></td>
+	</tr>
+	<tr>
+	<td>Scheme Name</td>
+	<td><input type="text" name="schemeName"></td>
+	</tr>
+	<tr>
+	<td>Connection Duration (Days)</td>
+	<td><input type="number" name="connDuration"></td>
+	</tr>
+	<tr>
+	<td><input type="submit" name="submit" value="Calculate Bill Amount"></td>
+	<td><input type="reset" name="reset" value="cancel"></td>
+	</tr>
+	</table>
+	</form>
+</body>
+</html>
