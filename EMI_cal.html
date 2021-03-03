@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function formValidation(){
+	var LoanAmount=document.form.loanAmount.value;
+	var InterestRate=document.form.interestRate.value;
+	var LoanTenure=document.form.loanTenure.value;
+	
+	if(LoanAmount==""||LoanAmount==null){
+		alert("Loan Amount cannot be left empty")
+	}else if(InterestRate==""||InterestRate==null){
+		alert("Interest Rate cannot be left empty")
+	}else if(LoanTenure==""||LoanTenure==null){
+		alert("Loan Tenure cannot be left empty")
+	}
+}
+</script>
+</head>
+<body>
+<h2>EMI Calculator</h2>
+	<form action="" name="form" onsubmit="return formValidation()">
+	<table>
+		<tr>
+		<td>Loan Amount</td>
+		<td><input type="number" name="loanAmount"></td>
+		</tr>
+		<tr>
+		<td>Interest Rate</td>
+		<td><input type="number" name="interestRate"></td>
+		</tr>
+		<tr>
+		<td>Loan Tenure</td>
+		<td><input type="number" name="loanTenure"></td>
+		</tr>
+		<tr>
+		<td><input type="submit" name="submit" value="Submit"></td>
+		<td><input type="reset" name="reset" value="cancel"></td>
+		</tr>
+	</table></form>
+
+</body>
+</html>
